@@ -1,0 +1,34 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        ddl-auto: update
+    defer-datasource-initialization: true
+  datasource:
+    url: jdbc:mysql://mysqldb:3306/final3_db
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: wodnd0131
+
+jwt:
+  secret-key: SecretKeyForMong2SecretKeyForMong2
+  expire-length: 36000000
+
+sendgrid:
+  authorization: Bearer SecretKeyForMong2SecretKeyForMong2
+  timeout:
+    connect: 3
+    read: 10
+  url:
+    base: https://api.sendgrid.com/v3
+    send: /mail/send
+  render:
+    from: wodnd0131@naver.com
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method
+

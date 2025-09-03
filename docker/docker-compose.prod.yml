@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  backend:
+    image: wodnd0131/final_lv3:latest
+    restart: always
+    ports:
+      - "80:8080"
+    volumes:
+      - ./data/springboot/logs:/var/logs
+    environment:
+      SPRING_ACTIVE_PROFILE: prod
+    networks:
+      - app-tier
+
+networks:
+  app-tier:
+    driver: bridge
